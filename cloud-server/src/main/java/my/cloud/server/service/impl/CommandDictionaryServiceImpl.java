@@ -20,7 +20,7 @@ public class CommandDictionaryServiceImpl implements CommandDictionaryService {
     private Map<String, CommandService> getCommonDictionary() {
         List<CommandService> commandServices = Factory.getCommandServices();
 
-        Map<String, CommandService> commandDictionary = new HashMap<>();
+        Map<String, CommandService> commandDictionary = new HashMap();
         for (CommandService commandService : commandServices) {
             commandDictionary.put(commandService.getCommand(), commandService);
         }
